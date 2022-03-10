@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+html, body {
+  margin: 0;
+  font-family: 'Roboto';
+}
+textarea {
+  resize: none;
+}
+
+/* Form Field */
+.form-field {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+.form-field .form-field-label {
+  width: 110px;
+  min-width: 110px;
+  max-width: 110px;
+  /* padding-top: 14px; */
+}
+.form-field .form-field-input {
+  width: 100%;
+}
+.form-field .form-field-input .mdc-text-field--filled {
+  width: 100%;
+}
+.form-field .form-field-button  {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+	padding-left: 12px;
+}
+
+/* Spinner */
+.animated-spinner {
+	 animation: rotator 1.4s linear infinite;
+}
+ @keyframes rotator {
+	 0% {
+		 transform: rotate(0deg);
+	}
+	 100% {
+		 transform: rotate(270deg);
+	}
+}
+ .animated-spinner .spinner-path {
+	 stroke-dasharray: 200;
+	 stroke-dashoffset: 0;
+	 transform-origin: center;
+   stroke: #6200ee;
+	 animation: dash 1.4s ease-in-out infinite;
+}
+ @keyframes dash {
+	 0% {
+		 stroke-dashoffset: 200;
+	}
+	 50% {
+		 stroke-dashoffset: 46.75;
+		 transform: rotate(135deg);
+	}
+	 100% {
+		 stroke-dashoffset: 200;
+		 transform: rotate(450deg);
+	}
+}

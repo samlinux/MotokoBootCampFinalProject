@@ -1,0 +1,50 @@
+.plug-wallet-connection-loading {
+  padding: 50px 20px 20px 20px;
+  text-align: center;
+}
+.plug-wallet-connection-loading-info {
+  margin-top: 30px;
+}
+.plug-wallet-connection-loading-info-text {
+  display: inline-block;
+  max-width: 460px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #6200ee;
+}
+.plug-wallet-connection-loading-info-logo {
+  max-width: 100px;
+  width: 100%;
+  margin-top: 20px;
+}
+.main-content-container {
+  padding: 12px 12px 0 12px;
+}
+.welcome-screen {
+  padding-top: 20px;
+  text-align: center;
+}
+.welcome-title {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.welcome-info {
+  margin-bottom: 25px;
+}
+.welcome-mode-selection button {
+  margin: 8px 10px;
+}
+.plug-wallet-connected-btn {
+  margin-left: 15px;
+  background: white;
+  pointer-events: none;
+  user-select: none;
+}
+.plug-wallet-connected-btn .mdc-button__label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 135px;
+}

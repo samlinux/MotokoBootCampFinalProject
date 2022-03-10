@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MintNftComponent } from './mint-nft/mint-nft.component';
+import { ShowCollectionComponent } from './show-collection/show-collection.component';
+import { NftPlatformComponent } from './nft-platform/nft-platform.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MintNftComponent,
+    ShowCollectionComponent,
+    NftPlatformComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
