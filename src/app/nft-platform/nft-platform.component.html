@@ -3,33 +3,36 @@
   <div class="mdc-tab-scroller">
     <div class="mdc-tab-scroller__scroll-area">
       <div class="mdc-tab-scroller__scroll-content">
-        <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0" (click)="currentModule = 'mint';"
-          [ngClass]="{'mdc-tab--active': currentModule === 'mint'}">
+        <!-- Tab - Mint NFT -->
+        <button *ngIf="authService.userWalletPrincipal" class="mdc-tab" role="tab" aria-selected="true" tabindex="0"
+          (click)="currentModule = 'mint';" [ngClass]="{'mdc-tab--active': currentModule === 'mint'}">
           <span class="mdc-tab__content">
             <span class="mdc-tab__icon material-icons" aria-hidden="true">add_circle</span>
-            <span class="mdc-tab__text-label">Mint NFT</span>
+            <span class="mdc-tab__text-label">Mint</span>
           </span>
           <span class="mdc-tab-indicator mdc-tab-indicator--active">
             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
           </span>
           <span class="mdc-tab__ripple"></span>
         </button>
-        <button class="mdc-tab" role="tab" aria-selected="true" tabindex="1" (click)="currentModule = 'own';"
-          [ngClass]="{'mdc-tab--active': currentModule === 'own'}">
+        <!-- Tab - My NFTs -->
+        <button *ngIf="authService.userWalletPrincipal" class="mdc-tab" role="tab" aria-selected="true" tabindex="1"
+          (click)="currentModule = 'own';" [ngClass]="{'mdc-tab--active': currentModule === 'own'}">
           <span class="mdc-tab__content">
             <span class="mdc-tab__icon material-icons" aria-hidden="true">image</span>
-            <span class="mdc-tab__text-label">My NFTs</span>
+            <span class="mdc-tab__text-label">My Own</span>
           </span>
           <span class="mdc-tab-indicator mdc-tab-indicator--active">
             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
           </span>
           <span class="mdc-tab__ripple"></span>
         </button>
+        <!-- Tab - All NFTs-->
         <button class="mdc-tab" role="tab" aria-selected="true" tabindex="1" (click)="currentModule = 'all';"
           [ngClass]="{'mdc-tab--active': currentModule === 'all'}">
           <span class="mdc-tab__content">
             <span class="mdc-tab__icon material-icons" aria-hidden="true">collections</span>
-            <span class="mdc-tab__text-label">All NFTs</span>
+            <span class="mdc-tab__text-label">All</span>
           </span>
           <span class="mdc-tab-indicator mdc-tab-indicator--active">
             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>

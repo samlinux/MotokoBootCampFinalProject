@@ -9,15 +9,16 @@
     "prebuild": "npm run copy:types",
     "prestart": "npm run copy:types",
     "copy:types": "rsync -avr .dfx/$(echo ${DFX_NETWORK:-'**'})/canisters/** --exclude='assets/' --exclude='idl/' --exclude='*.wasm' --delete src/declarations",
+    "ng-start-dfx": "dfx stop && dfx start --clean --emulator",
     "ng-start": "npm run ng-start-dfx && dfx generate && dfx canister create backend && dfx canister create www && npm run ng-serve && npm run print-ng",
     "ng-serve": "dfx canister create backend && dfx canister create www && dfx generate && concurrently -k \"npm run ng-watch-motoko\" \"ng serve\" ",
-    "ng-start-dfx": "dfx stop && dfx start --clean --emulator",
-    "ng-build-backend": "dfx deploy backend --argument '(\"RockStar\",\"SOL\")'",
+    "ng-build-backend": "dfx deploy backend --argument '(\"RockStar\",\"RSR\")'",
     "ng-watch-motoko": "nodemon --watch src --ext mo -x \"npm run ng-build-backend && npm run print-dfx-www\"",
-    "ng-deploy": "dfx deploy www --argument '(\"RockStar\",\"SOL\")'  && npm run print-dfx-www",
-    "build-dfx-www": "npm run ng-start-dfx && dfx deploy backend --argument '(\"RockStar\",\"SOL\")' && npm run print-dfx-www",
+    "ng-deploy": "dfx deploy www --argument '(\"RockStar\",\"RSR\")'  && npm run print-dfx-www",
+    "build-dfx-www": "npm run ng-start-dfx && dfx deploy backend --argument '(\"RockStar\",\"RSR\")' && npm run print-dfx-www",
     "print-dfx-www": "echo local IC server: http://localhost:8000/?canisterId=$(dfx canister id www)",
-    "print-ng": "echo local Angular server: http://localhost:4200"
+    "print-ng": "echo local Angular server: http://localhost:4200",
+    "ng-deploy-ic": "dfx deploy --network ic www --argument '(\"RockStar\",\"RSR\")'  && npm run print-dfx-www"
   },
   "private": true,
   "dependencies": {

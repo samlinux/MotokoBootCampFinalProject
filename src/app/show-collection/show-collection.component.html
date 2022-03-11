@@ -1,40 +1,4 @@
 <div class="nft-collection-container">
-  <!-- Principal-Input -->
-  <div *ngIf="!authService.userWalletPrincipal && currentModule === 'own'" class="nft-collection-principal-input">
-    <div class="principal-input-container">
-      <div class="form-field">
-        <div class="form-field-label">
-          Principal:
-        </div>
-        <div class="form-field-input">
-          <label class="mdc-text-field mdc-text-field--textarea mdc-text-field--filled mdc-text-field--no-label">
-            <span class="mdc-notched-outline">
-              <span class="mdc-notched-outline__leading"></span>
-              <span class="mdc-notched-outline__trailing"></span>
-            </span>
-            <span class="mdc-text-field__resizer">
-              <textarea [(ngModel)]="principal" name="principal" class="mdc-text-field__input" rows="2"></textarea>
-            </span>
-          </label>
-        </div>
-        <div class="form-field-button">
-          <button (click)="getNftCollectionData()" class="mdc-button mdc-button--raised mdc-button--leading"
-            [disabled]="!principal || principal === '' || getDataInProcess">
-            <span class="mdc-button__ripple"></span>
-            <i *ngIf="!getDataInProcess" class="material-icons mdc-button__icon">search</i>
-            <span *ngIf="getDataInProcess" class="mdc-button__icon">
-              <svg class="animated-spinner" width="20px" height="20px" viewBox="0 0 66 66"
-                xmlns="http://www.w3.org/2000/svg">
-                <circle class="spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30">
-                </circle>
-              </svg>
-            </span>
-            <span class="mdc-button__label">Search NFTs</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Loading-Spinner -->
   <div *ngIf="getDataInProcess && requestWasSent" class="loading-spinner">
     <svg class="animated-spinner" width="60px" height="60px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
@@ -120,7 +84,8 @@
           </div>
           <div>
             <button type="button" class="mdc-button mdc-button--raised mdc-button--leading"
-              [disabled]="(authService.userWalletBalance - tokenPrice) < 0 || buyNftInProcess" (click)="buyNftDoTransaction()">
+              [disabled]="(authService.userWalletBalance - tokenPrice) < 0 || buyNftInProcess"
+              (click)="buyNftDoTransaction()">
               <span class="mdc-button__ripple"></span>
               <i *ngIf="!buyNftInProcess" class="material-icons mdc-button__icon">shopping_cart</i>
               <span *ngIf="buyNftInProcess" class="mdc-button__icon">

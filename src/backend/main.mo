@@ -46,7 +46,7 @@ actor class DRC721(_name : Text, _symbol : Text) {
     principal: Principal;
   };
 
-  // counter for data-history
+  // counter for data-history 
   private stable var next : NftId = 1;
 
   // data storage 

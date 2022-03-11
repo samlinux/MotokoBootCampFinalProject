@@ -7,7 +7,7 @@ import { UserAuthService } from './user-auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  public appTitle: string = 'NFT Demo by @rbole';
+  public appTitle: string = 'NFT Demo';
   public showAppContents: boolean = false;
   public showNftPlatform: boolean = false;
   public plugAuthProcessing: boolean = false;

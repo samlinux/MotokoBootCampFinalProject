@@ -48,3 +48,66 @@
   text-overflow: ellipsis;
   max-width: 135px;
 }
+.github-link-container {
+  margin-top: 50px;
+}
+.github-link-container .github-link {
+  display: inline-block;
+  padding: 0 12px 8px 12px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  user-select: none;
+  text-decoration: none;
+  color: #333;
+  box-sizing: border-box;
+}
+.github-link-container .github-link:hover {
+  background: #666;
+  border-color: #666 !important;
+  color: white;
+}
+.github-link-container .github-link:hover img {
+  filter: invert(100%);
+  -webkit-filter:invert(100%);
+}
+.github-link-container .github-link-container-logo {
+  text-align: center;
+}
+.github-link-container .github-link-container-logo img {
+  width: 90%;
+  max-width: 150px;
+}
+.github-link-container .github-link-container-info {
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+.github-mark-container {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+}
+.github-mark-container a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: transform .7s ease-in-out;
+}
+.github-mark-container a:hover {
+  transform: rotate(360deg);
+}
+.github-mark-container a img {
+  width: 100%;
+}
+.pulse-anim:hover, .pulse-anim:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 1em rgba(255, 255, 255, 0);
+}
+ @keyframes pulse {
+	 0% {
+		 box-shadow: 0 0 0 0 #333;
+	}
+}

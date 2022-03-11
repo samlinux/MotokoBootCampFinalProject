@@ -60,16 +60,6 @@
   margin-top: 8px;
   font-weight: 500;
 }
-.nft-collection-principal-input {
-  text-align: center;
-}
-.nft-collection-principal-input .principal-input-container {
-  display: inline-block;
-  min-width: 520px;
-  max-width: 920px;
-  width: 100%;
-  text-align: left;
-}
 .nft-buy-dialog-backdrop {
   display: flex;
   align-items: center;
