@@ -14,7 +14,7 @@ You can login with a Plug-Wallet or without. In the case you logged in without t
 If you are logged in you have the following functionality:
 
 - Display your current token balance
-- Mint a new NFT by filling in a valid link to an Image-URL (https://i.picsum.photos/id/814/400/400.jpg?hmac=nKR6rDJZO9qyez5qlUu_xCRIB8q9TlMveYR8GeYFYcY)
+- Mint a new NFT by filling in a valid link to an Image-URL (https://picsum.photos/400/400)
 - For a valid mint process you will receive your rewards and you will see it in the right corner of the dApp.
 - Under the tab "My NFTS" you can see a list of all owned NFTs.
   - There is a list shown with all your NFTs. If you hover over an image you see further attributes:
@@ -28,6 +28,10 @@ If you are logged in you have the following functionality:
   - You can buy an other NFT by clicking the BUY NFT Button.
   - In the small window - due to the lack of Material Design I have not used a modal dialogue - you can see your current token balance. If you have enouph tokens you can buy an image. In this case the creater remains the same but the principal changes. As a result, your token balance will be reduced as well. You can check it in the right corner.
 
+## Published Version
+You can find the public version on the IC-mainnet.
+
+[Demo](https://32d3k-kaaaa-aaaao-aabaq-cai.ic0.app/)
 
 
 ## Open Question
